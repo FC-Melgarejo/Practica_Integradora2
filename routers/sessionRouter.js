@@ -18,10 +18,10 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/login'
 
      console.log({ token })
     
-     return res.send(req.user)
+    //  return res.send(req.user)
     
      return res.cookie('authToken', token, {
-         maxAge: 60 * 60 * 1000
+         maxAge: 60* 60* 1000
     }).redirect('/api/sessions/current');
 });
 

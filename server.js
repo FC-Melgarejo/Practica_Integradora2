@@ -15,6 +15,8 @@ const handlebars = require('express-handlebars')
 
 const app = express();
 
+app.use(cookieParser('secretCookie'))
+
 // Configuración handlebars
 app.engine('handlebars', handlebars.engine())
 app.set('views', __dirname + '/views')
